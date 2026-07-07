@@ -4,60 +4,221 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>GesaTechnology</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GesaTechnology - Resume</title>
     <link rel="stylesheet" href="{% static 'my_website/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 <body>
-    <div class="container">
-        <h1 class="main-title">MY RESUME</h1>
-
-        <div class="row row-top">
-            <div class="card profile-card">
-                <div class="profile-img">
-                    <img src="{% static 'my_website/images/photor1.jpg' %}" alt="Dennis">
+    <div class="resume-page">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <div class="profile-img-wrap">
+                    <img src="{% static 'my_website/images/photor1.jpg' %}" alt="Geofrey Gaston">
                 </div>
-                <h3>Hi I'm Geofrey gaston!</h3>
-                <p>I love coding, doing research and collaborating</p>
+                <h1 class="sidebar-name">GEOFREY GASTON</h1>
+                <div class="title-banner">
+                    <span>SOFTWARE DEVELOPER</span>
+                </div>
             </div>
 
-            <div class="card job-card">
-                <h2>My First Job as a Developer</h2>
-                <hr>
+            <div class="contact-section">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-text">
+                        <strong>ADDRESS</strong>
+                        <span>Dar es Salaam, Tanzania</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <div class="contact-text">
+                        <strong>PHONE</strong>
+                        <span>+255 752 965 825</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-text">
+                        <strong>EMAIL</strong>
+                        <span>geofreygaston9@gmail.com</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-globe"></i></div>
+                    <div class="contact-text">
+                        <strong>WEBSITE</strong>
+                        <span>GesaTechnology</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skills-section">
+                <div class="skill-bar">
+                    <div class="skill-label">
+                        <span>PYTHON</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="skill-track"><div class="skill-fill" style="width: 90%"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-label">
+                        <span>DJANGO</span>
+                        <span>85%</span>
+                    </div>
+                    <div class="skill-track"><div class="skill-fill" style="width: 85%"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-label">
+                        <span>REACT</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="skill-track"><div class="skill-fill" style="width: 80%"></div></div>
+                </div>
+                <div class="skill-bar">
+                    <div class="skill-label">
+                        <span>POSTGRES</span>
+                        <span>75%</span>
+                    </div>
+                    <div class="skill-track"><div class="skill-fill" style="width: 75%"></div></div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Right Main Content -->
+        <main class="main-content">
+            <section class="about-section">
+                <h2 class="section-title-faded">ABOUT ME</h2>
                 <p>
                     Junior Software Developer with hands-on experience since 2023.
                     Skilled in building websites and apps, solving problems,
                     and learning new technologies fast. Passionate about delivering clean, functional code.
                 </p>
-                <div class="icons">
-                    <a href="https://facebook.com/Gesa technology" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="https://instagram.com/GESATechnology" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://linkedin.com/in/Geofrey Gaston" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/geofrey gaston" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="mailto:geofreygaston9@gmail.com"><i class="fas fa-envelope"></i></a>
+                <p>
+                    I love coding, doing research and collaborating. Full stack developer at GesaTechnology,
+                    where I design and build full lab management systems and modern web applications.
+                </p>
+
+                <div class="tech-icons">
+                    <div class="tech-item">
+                        <div class="tech-circle">Py</div>
+                        <div class="tech-dots">
+                            <span class="dot filled"></span>
+                            <span class="dot filled"></span>
+                            <span class="dot filled"></span>
+                            <span class="dot filled"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-circle">Dj</div>
+                        <div class="tech-dots">
+                            <span class="dot filled"></span>
+                            <span class="dot filled"></span>
+                            <span class="dot filled"></span>
+                            <span class="dot filled"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-circle">JS</div>
+                        <div class="tech-dots">
+                            <span class="dot filled"></span>
+                            <span class="dot filled"></span>
+                            <span class="dot filled"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-circle">Re</div>
+                        <div class="tech-dots">
+                            <span class="dot filled"></span>
+                            <span class="dot filled"></span>
+                            <span class="dot filled"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </section>
 
-        <div class="row row-bottom">
-            <div class="card half-card">
-                <h2>My Experience as a Developer</h2>
-                <p>Full stack developer at GesaTechnology company.</p>
-                <p>Designed & built a full lab management system...</p.< /p>
-            </div>
+            <section class="timeline-section">
+                <div class="section-banner">
+                    <span>EDUCATION</span>
+                </div>
 
-            <div class="card half-card">
-                <h3>What I Know</h3>
-                <hr>
-                <p>Python, Django, HTML/CSS, JavaScript/Jquery, React, Postgres, AWS and APIs.</p>
-            </div>
-        </div>
+                <div class="timeline">
+                    <div class="timeline-entry">
+                        <div class="timeline-years">
+                            <span>2019</span>
+                            <span>2023</span>
+                        </div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>COMPUTER SCIENCE</h3>
+                            <p class="timeline-place">at University</p>
+                            <p>Studied software development fundamentals, algorithms, databases, and web technologies.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="timeline-section">
+                <div class="section-banner">
+                    <span>EXPERIENCE</span>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-entry">
+                        <div class="timeline-years">
+                            <span>2023</span>
+                            <span>Now</span>
+                        </div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>FULL STACK DEVELOPER</h3>
+                            <p class="timeline-place">at GesaTechnology</p>
+                            <p>Designed and built a full lab management system. Developed websites and apps using Python, Django, React, and Postgres.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-entry">
+                        <div class="timeline-years">
+                            <span>2023</span>
+                            <span>2024</span>
+                        </div>
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3>JUNIOR SOFTWARE DEVELOPER</h3>
+                            <p class="timeline-place">at GesaTechnology</p>
+                            <p>Built responsive web interfaces, integrated APIs, and collaborated on product features across the stack.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="interests-section">
+                <div class="interest-item">
+                    <i class="fas fa-code"></i>
+                    <span>CODING</span>
+                </div>
+                <div class="interest-item">
+                    <i class="fas fa-search"></i>
+                    <span>RESEARCH</span>
+                </div>
+                <div class="interest-item">
+                    <i class="fas fa-users"></i>
+                    <span>COLLABORATION</span>
+                </div>
+                <div class="interest-item">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>PROJECTS</span>
+                </div>
+            </section>
+        </main>
     </div>
-
-
-
-
 
     <footer class="resume-footer">
         <div class="footer-column">
@@ -76,7 +237,6 @@
                 <li>linkdin (Geofrey Gaston)</li>
                 <li>Email (geofreygaston9@gmail.com)</li>
                 <li>facebook (GESATechnology)</li>
-
             </ul>
         </div>
 
@@ -92,9 +252,5 @@
         </div>
     </footer>
 
-
-
-    <!-- Link JS -->
-    <script src="{% static 'my_website/js/script.js' %}"></script>
 </body>
 </html>

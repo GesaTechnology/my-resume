@@ -5,128 +5,365 @@
 }
 
 body {
-    background-color: #f0f2f5;
+    background-color: #d8dce3;
     font-family: 'Segoe UI', Arial, sans-serif;
-    padding: 20px;
+    padding: 30px 20px;
 }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
+/* ===== RESUME TWO-COLUMN LAYOUT ===== */
+.resume-page {
+    display: flex;
+    max-width: 960px;
+    margin: 0 auto 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    min-height: 1100px;
 }
 
-.main-title {
+/* ----- Left Sidebar ----- */
+.sidebar {
+    flex: 0 0 32%;
+    background-color: #1c2d4f;
+    color: #fff;
+    padding: 35px 25px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-section {
     text-align: center;
     margin-bottom: 30px;
-    border-bottom: 3px solid #000;
-    display: table;
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 5px;
-    color: #4CAF50;
 }
 
-.row {
+.profile-img-wrap {
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    border: 5px solid #e8b923;
+    overflow: hidden;
+    background: #2a3f6a;
+    position: relative;
+}
+
+.profile-img-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 40%, rgba(255,255,255,0.08) 0%, transparent 70%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.profile-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.sidebar-name {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #fff;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.title-banner {
+    background-color: #e8b923;
+    color: #1c2d4f;
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: 1px;
+    padding: 8px 20px 8px 14px;
+    clip-path: polygon(0 0, 92% 0, 100% 50%, 92% 100%, 0 100%);
+    display: inline-block;
+}
+
+.title-banner span {
+    display: block;
+}
+
+/* Contact */
+.contact-section {
+    margin-bottom: 35px;
+}
+
+.contact-item {
     display: flex;
-    gap: 20px;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.contact-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background-color: #e8b923;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1c2d4f;
+    font-size: 13px;
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.contact-text strong {
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    color: #e8b923;
+}
+
+.contact-text span {
+    color: #c8d0e0;
+    word-break: break-word;
+}
+
+/* Skill Bars */
+.skills-section {
+    margin-top: auto;
+}
+
+.skill-bar {
+    margin-bottom: 14px;
+}
+
+.skill-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.skill-track {
+    height: 6px;
+    background-color: #2a3f6a;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skill-fill {
+    height: 100%;
+    background-color: #e8b923;
+    border-radius: 3px;
+}
+
+/* ----- Right Main Content ----- */
+.main-content {
+    flex: 1;
+    background-color: #eef0f4;
+    padding: 35px 35px 30px;
+}
+
+/* About Me */
+.about-section {
+    margin-bottom: 30px;
+}
+
+.section-title-faded {
+    font-size: 42px;
+    font-weight: 800;
+    color: #d0d5de;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    line-height: 1;
+}
+
+.about-section p {
+    font-size: 12px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Tech Icons */
+.tech-icons {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.tech-item {
+    text-align: center;
+}
+
+.tech-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: #1c2d4f;
+    color: #e8b923;
+    font-size: 13px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+}
+
+.tech-dots {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+}
+
+.dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #c5cad3;
+}
+
+.dot.filled {
+    background-color: #1c2d4f;
+}
+
+/* Section Banners */
+.section-banner {
+    background-color: #e8b923;
+    color: #1c2d4f;
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    padding: 8px 24px 8px 16px;
+    clip-path: polygon(0 0, 94% 0, 100% 50%, 94% 100%, 0 100%);
+    display: inline-block;
     margin-bottom: 20px;
 }
 
-.card {
-    background: white;
-    padding: 25px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
+/* Timeline */
+.timeline-section {
+    margin-bottom: 28px;
 }
 
-/* --- SAFU YA JUU (Inatofautiana) --- */
-.profile-card {
-
-    flex: 0 0 300px;
-    /* Inabaki kuwa nyembamba (300px) */
-    text-align: center;
+.timeline {
+    position: relative;
+    padding-left: 0;
 }
 
-.job-card {
-    flex: 1;
-    /* Inachukua nafasi yote iliyobaki (Inakuwa pana sana) */
+.timeline-entry {
+    display: grid;
+    grid-template-columns: 70px 20px 1fr;
+    gap: 0 12px;
+    margin-bottom: 22px;
+    position: relative;
 }
 
-/* --- SAFU YA CHINI (Zinalingana 50/50) --- */
-.row-bottom .half-card {
-    flex: 1;
-    /* Zote mbili zinapewa uzito sawa, hivyo zitashiriki nafasi nusu kwa nusu */
+.timeline-entry:not(:last-child) .timeline-marker::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 14px;
+    transform: translateX(-50%);
+    width: 2px;
+    height: calc(100% + 22px);
+    background-color: #c5cad3;
 }
 
-/* Mapambo mengine */
-.profile-img img {
-    width: 120px;
-    height: 120px;
+.timeline-years {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-top: 2px;
+}
+
+.timeline-years span {
+    font-size: 13px;
+    font-weight: 800;
+    color: #1c2d4f;
+    line-height: 1.3;
+}
+
+.timeline-marker {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 4px;
+}
+
+.timeline-marker::before {
+    content: '';
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    margin-bottom: 15px;
+    background-color: #1c2d4f;
+    border: 2px solid #eef0f4;
+    box-shadow: 0 0 0 2px #c5cad3;
+    z-index: 1;
+    position: relative;
 }
 
-hr {
-    border: none;
-    border-top: 1px solid #eee;
-    margin-bottom: 15px;
+.timeline-content h3 {
+    font-size: 13px;
+    font-weight: 800;
+    color: #1c2d4f;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
 }
 
-h2,
-h3 {
-    margin-bottom: 10px;
-    color: #4CAF50;
+.timeline-place {
+    font-size: 12px;
+    color: #7a8aaa;
+    margin-bottom: 6px;
 }
 
-p {
+.timeline-content p {
+    font-size: 11px;
     line-height: 1.6;
-    color: #555;
-    font-size: 15px;
+    color: #666;
 }
 
-/*icon*/
-.icons {
-    margin-top: 15px;
+/* Interests */
+.interests-section {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    border-top: 1px solid #d8dce3;
+    margin-top: 10px;
 }
 
-.icons a {
-    margin-right: 10px;
-    font-size: 22px;
-    color: #e01b29;
-    text-decoration: none;
-    transition: 0.3s;
+.interest-item {
+    text-align: center;
+    color: #1c2d4f;
 }
 
-.icons a:hover {
-    color: #2a095c;
-    transform: scale(1.2);
+.interest-item i {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 6px;
+    color: #1c2d4f;
 }
 
-/* RESPONSIVENESS (Kwa ajili ya Simu) */
-@media (max-width: 800px) {
-    .row {
-        flex-direction: column;
-    }
-
-    .profile-card {
-        flex: 1 1 auto;
-        width: 100%;
-    }
+.interest-item span {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
-
-
-
-
+/* ===== FOOTER ===== */
 .resume-footer {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    /* Nafasi ndogo kati ya column */
     padding: 40px 8%;
     background-color: #fff;
     border-top: 1px solid #eee;
     justify-content: flex-start;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 .footer-column {
@@ -149,6 +386,7 @@ p {
 .contact-info p {
     font-size: 14px;
     margin-bottom: 5px;
+    color: #555;
 }
 
 .footer-column h3 {
@@ -157,7 +395,6 @@ p {
     margin-bottom: 15px;
 }
 
-/* List Styling */
 .footer-list {
     list-style: none;
 }
@@ -169,12 +406,9 @@ p {
     display: flex;
     align-items: center;
     cursor: default;
-    /* Inafanya ionekane sio link ya kubofya */
     transition: all 0.3s ease;
-    /* Inafanya hover iwe laini */
 }
 
-/* Mshale wa Blue (>) */
 .footer-list li::before {
     content: '>';
     color: #31a9e1;
@@ -183,19 +417,74 @@ p {
     font-weight: bold;
 }
 
-/* HOVER EFFECT: Inabadilika hapa */
 .footer-list li:hover {
     color: #31a9e1;
-    /* Inakuwa blue */
     transform: translateX(5px);
-    /* Inasogea kidogo kulia */
 }
 
-/* Kwa ajili ya Simu */
-@media (max-width: 600px) {
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    body {
+        padding: 15px 10px;
+    }
+
+    .resume-page {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .sidebar {
+        flex: none;
+        width: 100%;
+    }
+
+    .main-content {
+        padding: 25px 20px;
+    }
+
+    .section-title-faded {
+        font-size: 30px;
+    }
+
+    .tech-icons {
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .timeline-entry {
+        grid-template-columns: 55px 16px 1fr;
+        gap: 0 8px;
+    }
+
+    .interests-section {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
     .resume-footer {
         flex-direction: column;
         gap: 30px;
         padding: 30px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-years span {
+        font-size: 11px;
+    }
+
+    .timeline-entry {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .timeline-years {
+        flex-direction: row;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .timeline-marker {
+        display: none;
     }
 }
